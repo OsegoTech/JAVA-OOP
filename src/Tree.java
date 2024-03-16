@@ -1,27 +1,27 @@
 import java.awt.*;
 public class Tree {
-    double heightFt;
-    double trunkDiameterInches;
-    TreeType treeType;
+   private double heightFt;
+   private double trunkDiameterInches;
+   private TreeType treeType;
 
-    static Color TRUNK_COLOR = new Color(102,51,0);
+    protected static Color TRUNK_COLOR = new Color(102,51,0);
 
 //    constructor
-    Tree(double heightFt, double trunkDiameterInches, TreeType treeType){
+    public Tree(double heightFt, double trunkDiameterInches, TreeType treeType){
         this.heightFt = heightFt;
         this.trunkDiameterInches = trunkDiameterInches;
         this.treeType = treeType;
     }
 // methods or behavior
-    void grow(){
+    public void grow(){
         this.heightFt = this.heightFt + 10;
         this.trunkDiameterInches = this.trunkDiameterInches + 1;
     }
-    static void announceTree(){
+    public static void announceTree(){
         System.out.println("Look out for that" + TRUNK_COLOR +" tree!");
     }
 
-    void announceTallTree(){
+    public void announceTallTree(){
         if (this.heightFt > 100){
             System.out.println("That's a tall " + this.treeType +"  tree");
         }
