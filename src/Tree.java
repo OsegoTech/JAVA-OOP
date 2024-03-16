@@ -4,6 +4,22 @@ public class Tree {
    private double trunkDiameterInches;
    private TreeType treeType;
 
+   public double getHeightFt(){
+       return heightFt;
+   }
+
+    public double getTrunkDiameterInches() {
+        return trunkDiameterInches;
+    }
+
+    public TreeType getTreeType() {
+        return treeType;
+    }
+
+    public void setTrunkDiameterInches(double trunkDiameterInches){
+       this.trunkDiameterInches = trunkDiameterInches;
+    }
+
     protected static Color TRUNK_COLOR = new Color(102,51,0);
 
 //    constructor
